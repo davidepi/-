@@ -5,11 +5,49 @@
   <meta charset="UTF-8">
   <title>davidepi, PhD</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <style>
+    @keyframes to-reverse {
+      0% {
+        transform: scaleX(1);
+      }
+
+      100% {
+        transform: scaleX(-1);
+      }
+    }
+
+    @keyframes to-normal {
+      0% {
+        transform: scaleX(-1);
+      }
+
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+
+  <script>
+    let isNormal = true;
+
+    function reverse() {
+      const pippo = document.getElementById("wrap");
+      if (isNormal) {
+        pippo.style.animation = 'to-reverse 1s linear forwards';
+        isNormal = false;
+      } else {
+        pippo.style.animation = 'to-normal 1s linear forwards';
+        isNormal = true;
+      }
+    }
+
+  </script>
 </head>
 
 <body>
-  <div
-    style="max-width: 650px; border: 1px solid #333; padding: 1rem; margin: auto; box-shadow: 2px 2px #333; overflow: scroll;">
+  <div id="wrap"
+    style="max-width: 650px; border: 1px solid #333; padding: 1rem 1rem 0.1rem 1rem; margin: auto; box-shadow: 2px 2px #333; overflow: scroll;">
     <p style="font-style: italic; text-align: right;">
       大阪, 2023-03-23
     </p>
@@ -50,6 +88,118 @@
         Amicone &amp; Snorlax
       </span>
     </p>
+    <div style="display: flex">
+      <button style="margin-left: auto; border: 1px solid #333; box-shadow: 2px 2px #333; padding: 0.3rem;"
+        onclick="reverse()">
+        Apply reverse engineering
+      </button>
+    </div>
+    <div style="display: flex; margin-top: 10px;">
+      <svg style="margin: auto;" width=40 height=40 viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut"
+        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        fill="#000000">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <desc></desc>
+          <g>
+            <path
+              d="M29,27H3 c-1.105,0-2-0.895-2-2V7c0-1.105,0.895-2,2-2h26c1.105,0,2,0.895,2,2v18C31,26.105,30.105,27,29,27z"
+              fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path>
+            <rect fill="none" height="4" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10"
+              stroke-width="2" width="4" x="14" y="27"></rect>
+            <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="31"
+              x2="1" y1="23" y2="23"></line>
+            <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="9"
+              x2="23" y1="31" y2="31"></line>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="16" x2="16" y1="8" y2="16">
+            </line>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="16" x2="16" y1="18" y2="20">
+            </line>
+          </g>
+        </g>
+      </svg>
+      <svg style="margin: auto;" width=50 height=50 viewBox="0 0 400 400" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path opacity="0.503384"
+            d="M163.374 124.556C146.946 135.22 66.0099 183.076 64.0217 187.396C62.0334 191.715 197.515 276.135 217.509 270.324C231.21 266.343 302.308 217.272 322.596 204.888C323.404 204.397 336.141 198.028 335.973 197.765C328.259 185.998 199.769 132.183 179.936 121.315"
+            stroke="#000000" stroke-opacity="0.9" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path d="M102.462 195.384C71.4173 211.999 66.4861 205.871 69.3178 245.728" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M136.912 213.901C96.2616 226.49 109.025 219.493 113.194 260.195" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path
+            d="M168.62 225.888C160.406 229.45 152.036 233.667 150.468 235.237C144.148 241.561 148.166 277.311 148.166 273.177"
+            stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path
+            d="M203.555 241.873C184.591 251.936 183.068 253.269 186.329 273.016C187.427 279.674 186.329 287.594 186.329 291.442"
+            stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path d="M235.275 238.619C264.413 246.307 261.865 248.818 261.865 278.712" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M270.633 224.317C299.757 229.85 296.391 239.182 296.391 262.509" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path
+            d="M296.691 206.45C300.159 208.326 322.844 215.302 328.458 220.999C332.349 224.947 328.458 256.823 328.458 252.92"
+            stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path d="M299.436 175.709C328.393 153.025 318.442 147.107 324.398 183.811" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M266.533 152.526C283.669 131.837 282.727 145.212 282.727 165.294" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M222.555 138.293C248.434 114.712 242.887 124.37 242.887 149.091" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M190.149 121.618C200.614 105.755 210.212 99.2229 210.212 127.456" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M82.5172 158.026C60.5619 143.95 64.0184 153.473 68.4407 175.709" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path
+            d="M123.024 145.271C99.6368 140.27 90.1497 112.999 92.0019 148.578C92.3367 154.975 91.3497 162.443 95.1063 166.451"
+            stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path d="M143.855 122.135C116.096 95.6655 120.771 127.68 125.321 145.619" stroke="#000000"
+            stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+      </svg>
+      <svg style="margin: auto;" width=50 height=50 fill="#000000" height="200px" width="200px" version="1.1"
+        id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+        xml:space="preserve">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <path
+              d="M480.003,128H48c0-22.056-17.944-40-40-40c-4.418,0-8,3.582-8,8s3.582,8,8,8c13.234,0,24,10.766,24,24v288 c0,4.418,3.582,8,8,8s8-3.582,8-8v-8h16.01C77.238,408,88,397.238,88,384.01V384h392.003C497.646,384,512,369.646,512,352.003 V159.997C512,142.354,497.646,128,480.003,128z M496,352.003c0,8.821-7.176,15.997-15.997,15.997H80c-4.418,0-8,3.582-8,8v8.01 c0,4.406-3.584,7.99-7.99,7.99H48V144h432.003c8.821,0,15.997,7.176,15.997,15.997V352.003z">
+            </path>
+            <path
+              d="M240,192c-22.922,0-43.057,12.12-54.363,30.28c-0.784,0.849-1.379,1.856-1.737,2.954c-5.03,9.136-7.9,19.621-7.9,30.766 c0,11.406,3.013,22.115,8.264,31.399c0.187,0.398,0.407,0.778,0.656,1.14C196.078,307.354,216.586,320,240,320 c35.29,0,64-28.71,64-64c0-11.406-3.013-22.115-8.264-31.399c-0.187-0.398-0.407-0.778-0.656-1.14 C283.922,204.646,263.414,192,240,192z M192,256c0-4.395,0.605-8.648,1.717-12.695c3.596,3.178,8.453,6.73,15.035,10.53 c6.376,3.681,11.742,6.078,16.208,7.612c-2.622,2.061-5.987,4.385-10.208,6.821c-8.449,4.878-14.816,7.039-18.36,7.752 C193.58,269.922,192,263.144,192,256z M288,256c0,4.103-0.52,8.087-1.493,11.891c-3.617-3.227-8.542-6.848-15.259-10.726 c-5.96-3.441-11.036-5.758-15.321-7.298c2.483-1.885,5.564-3.966,9.321-6.135c8.447-4.876,14.816-7.039,18.36-7.752 C286.42,242.078,288,248.856,288,256z M273.948,222.099c-4.562,1.524-10.087,3.96-16.699,7.777 c-6.252,3.61-10.952,6.997-14.49,10.051C242.31,236.682,242,232.717,242,228c0-9.763,1.314-16.361,2.469-19.785 C255.934,209.279,266.244,214.384,273.948,222.099z M227.619,209.627C226.655,214.344,226,220.354,226,228 c0,7.056,0.557,12.721,1.401,17.26c-3.022-1.232-6.59-2.938-10.65-5.282c-8.302-4.793-13.33-9.159-15.769-11.883 C207.376,219.18,216.739,212.535,227.619,209.627z M206.049,289.898c4.564-1.524,10.086-3.954,16.702-7.774 c6.252-3.61,10.952-6.997,14.49-10.051C237.69,275.318,238,279.283,238,284c0,9.763-1.314,16.361-2.469,19.785 C224.065,302.721,213.753,297.615,206.049,289.898z M252.381,302.373C253.345,297.656,254,291.646,254,284 c0-7.633-0.653-13.635-1.614-18.347c3.066,1.237,6.708,2.97,10.863,5.368c8.764,5.06,13.892,9.652,16.163,12.33 C273.012,292.546,263.486,299.405,252.381,302.373z">
+            </path>
+            <path
+              d="M440,168c-4.418,0-8,3.582-8,8s3.582,8,8,8c8.822,0,16,7.178,16,16v112c0,8.822-7.178,16-16,16H240 c-39.701,0-72-32.299-72-72s32.299-72,72-72h168c4.418,0,8-3.582,8-8s-3.582-8-8-8H240c-48.523,0-88,39.477-88,88s39.477,88,88,88 h200c17.645,0,32-14.355,32-32V200C472,182.355,457.645,168,440,168z">
+            </path>
+            <path
+              d="M112,232H88c-8.822,0-16,7.178-16,16v16c0,8.822,7.178,16,16,16h24c8.822,0,16-7.178,16-16v-16 C128,239.178,120.822,232,112,232z M88,264v-16h24l0.001,16H88z">
+            </path>
+            <path
+              d="M112,176H88c-8.822,0-16,7.178-16,16v16c0,8.822,7.178,16,16,16h24c8.822,0,16-7.178,16-16v-16 C128,183.178,120.822,176,112,176z M88,208v-16h24l0.001,16H88z">
+            </path>
+            <path
+              d="M112,288H88c-8.822,0-16,7.178-16,16v16c0,8.822,7.178,16,16,16h24c8.822,0,16-7.178,16-16v-16 C128,295.178,120.822,288,112,288z M88,320v-16h24l0.001,16H88z">
+            </path>
+            <path d="M432,200h-24c-4.418,0-8,3.582-8,8s3.582,8,8,8h24c4.418,0,8-3.582,8-8S436.418,200,432,200z"></path>
+            <path d="M432,296h-24c-4.418,0-8,3.582-8,8s3.582,8,8,8h24c4.418,0,8-3.582,8-8S436.418,296,432,296z"></path>
+            <path d="M432,224h-24c-4.418,0-8,3.582-8,8s3.582,8,8,8h24c4.418,0,8-3.582,8-8S436.418,224,432,224z"></path>
+            <path d="M432,248h-24c-4.418,0-8,3.582-8,8s3.582,8,8,8h24c4.418,0,8-3.582,8-8S436.418,248,432,248z"></path>
+            <path d="M432,272h-24c-4.418,0-8,3.582-8,8s3.582,8,8,8h24c4.418,0,8-3.582,8-8S436.418,272,432,272z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
   </div>
 </body>
 
